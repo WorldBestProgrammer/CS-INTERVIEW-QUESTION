@@ -3,10 +3,12 @@
 ---
 
 프로세스 메모리 구조는 아래와 같다.
-
+<p align="center">
+<img src="https://gabrieletolomei.files.wordpress.com/2013/10/program_in_memory2.png">
+</p>
 BSS는 아직 초기화되지 않은 static 변수를 가지고 있다.
 반면 Data는 초기화된 변수를 가지고 있다.
-![Process Memory Structure](https://gabrieletolomei.files.wordpress.com/2013/10/program_in_memory2.png)
+
 이렇듯 초기화 여부를 기준으로 영역을 나눈 이유는 
 프로그램이 메모리에 로드될 때 초기화된 변수는 실행파일에 명시되어 있는 값들을 가지고 오게 된다. 
 그러나 초기화되지 않은 변수는 0으로만 초기화하면 되기 때문에 명령어를 한 줄만 읽으면 된다.
@@ -57,6 +59,7 @@ main:
 ```
 위에서 볼 수 있듯이 a는 한 줄이면 되지만 b는 배열의 각 원소마다 초기화되어야 하는 값이 명시가 되어 있어야 한다.
 즉, 이렇게 하면 값이 당장 초기화해야 하지 않을 상황에서는 프로그램의 사이즈를 줄일 수 있게 된다. 또한 메모리에 공간을 할당하고 0으로 초기화만 하면 되기 때문에 메모리에 로드하는 시간도 줄어들게 된다.
+<br>
 ### Reference
 
 ---
